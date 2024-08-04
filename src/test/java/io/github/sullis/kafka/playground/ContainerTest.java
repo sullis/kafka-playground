@@ -2,6 +2,7 @@ package io.github.sullis.kafka.playground;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.testcontainers.containers.GenericContainer;
 import org.testcontainers.kafka.KafkaContainer;
 import org.testcontainers.utility.DockerImageName;
 
@@ -17,10 +18,9 @@ public class ContainerTest {
   private static final String APACHE_KAFKA_VERSION = "3.8.0";
   private static final KafkaContainer APACHE_KAFKA = new KafkaContainer(DockerImageName.parse("apache/kafka:" + APACHE_KAFKA_VERSION));
   private static final KafkaContainer APACHE_KAFKA_NATIVE_IMAGE = new KafkaContainer(DockerImageName.parse("apache/kafka-native:" + APACHE_KAFKA_VERSION));
-  private static final KafkaContainer CONFLUENT_PLATFORM_KAFKA = new KafkaContainer(DockerImageName.parse("confluentinc/cp-kafka:7.7.0").asCompatibleSubstituteFor("apache/kafka"));
+  private static final org.testcontainers.containers.KafkaContainer CONFLUENT_PLATFORM_KAFKA = new org.testcontainers.containers.KafkaContainer(DockerImageName.parse("confluentinc/cp-kafka:7.7.0").asCompatibleSubstituteFor("apache/kafka"));
 
   @Test
-  @Disabled
   public void testConfluentPlatformKafka() {
     validate(CONFLUENT_PLATFORM_KAFKA);
   }
@@ -35,7 +35,7 @@ public class ContainerTest {
     validate(APACHE_KAFKA_NATIVE_IMAGE);
   }
 
-  private void validate(org.testcontainers.kafka.KafkaContainer container) {
+  private void validate(GenericContainer<?> container) {
     container.start();
     container.stop();
     container.close();
