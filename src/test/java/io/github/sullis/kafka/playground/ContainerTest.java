@@ -16,10 +16,11 @@ import org.testcontainers.utility.DockerImageName;
  */
 public class ContainerTest {
   private static final String APACHE_KAFKA_VERSION = "3.8.0";
+  private static final String CONFLUENT_VERSION = "7.7.0";
   private static final KafkaContainer APACHE_KAFKA = new KafkaContainer(DockerImageName.parse("apache/kafka:" + APACHE_KAFKA_VERSION));
   private static final KafkaContainer APACHE_KAFKA_NATIVE_IMAGE = new KafkaContainer(DockerImageName.parse("apache/kafka-native:" + APACHE_KAFKA_VERSION));
-  private static final org.testcontainers.containers.KafkaContainer CONFLUENT_PLATFORM_KAFKA = new org.testcontainers.containers.KafkaContainer(DockerImageName.parse("confluentinc/cp-kafka:7.7.0").asCompatibleSubstituteFor("apache/kafka"));
-  private static final org.testcontainers.containers.KafkaContainer CONFLUENT_PLATFORM_KAFKA_WITH_KRAFT = new org.testcontainers.containers.KafkaContainer(DockerImageName.parse("confluentinc/cp-kafka:7.7.0")).withKraft();
+  private static final org.testcontainers.containers.KafkaContainer CONFLUENT_PLATFORM_KAFKA = new org.testcontainers.containers.KafkaContainer(DockerImageName.parse("confluentinc/cp-kafka:" + CONFLUENT_VERSION));
+  private static final org.testcontainers.containers.KafkaContainer CONFLUENT_PLATFORM_KAFKA_WITH_KRAFT = new org.testcontainers.containers.KafkaContainer(DockerImageName.parse("confluentinc/cp-kafka:" + CONFLUENT_VERSION)).withKraft();
 
   @Test
   public void testConfluentPlatformKafka() {
