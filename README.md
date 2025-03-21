@@ -15,6 +15,7 @@
 - [video: GeeCON 2023: Natan Silnitsky - Lessons learned from working with 2000 event-driven microservices](https://www.youtube.com/watch?v=y1rgKdN7Bv4)
 - [video: 10 lessons learned from using Kafka in more than 1000 microservices](https://www.youtube.com/watch?v=N7kRAVvgsoM)
 - [video: Migrating to Multi Cluster Managed Kafka - Natan Silnitsky](https://www.youtube.com/watch?v=jk6mYUuqOAs)
+- [video: Greyhound library at Scala Love in the City](https://www.youtube.com/watch?v=H8blL1gS30k)
 - [greyhound library](https://github.com/wix/greyhound)
  
 # Web UI for Kafka
