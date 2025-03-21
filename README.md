@@ -8,6 +8,7 @@
 - [kafka consumer proxy](https://www.wix.engineering/post/from-bottleneck-to-breakthrough-how-wix-cut-kafka-costs-by-30-with-a-push-based-consumer-proxy)
 - [High-level SDK for Kafka: Greyhound Unleashed](https://www.wix.engineering/post/building-a-high-level-sdk-for-kafka-greyhound-unleashed)
 - [video: How to Build 1000 Microservices with Kafka](https://www.youtube.com/watch?v=ZGqHTuA2uII)
+- [video: Kafka Based Global Data Mesh at Wix](https://www.youtube.com/watch?v=NHj1fSg7M-M)
 - [greyhound library](https://github.com/wix/greyhound)
  
 # Web UI for Kafka
