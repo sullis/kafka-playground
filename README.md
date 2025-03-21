@@ -13,6 +13,7 @@
 - [video: Migrating 2000 microservices to Multi Cluster Managed Kafka with 0 Downtime](https://www.youtube.com/watch?v=XKbG8a-9NRE)
 - [video: Exactly Once Delivery is a Harsh Mistress](https://www.youtube.com/watch?v=XkXSjYvX4Mg)
 - [video: GeeCON 2023: Natan Silnitsky - Lessons learned from working with 2000 event-driven microservices](https://www.youtube.com/watch?v=y1rgKdN7Bv4)
+- [video: 10 lessons learned from using Kafka in more than 1000 microservices](https://www.youtube.com/watch?v=N7kRAVvgsoM)
 - [greyhound library](https://github.com/wix/greyhound)
  
 # Web UI for Kafka
