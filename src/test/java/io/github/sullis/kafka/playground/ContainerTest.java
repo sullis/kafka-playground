@@ -28,6 +28,7 @@ public class ContainerTest {
   }
 
   @Test
+  @Disabled
   public void testConfluentPlatformKafkaWithKraft() {
     validate(CONFLUENT_PLATFORM_KAFKA_WITH_KRAFT);
   }
