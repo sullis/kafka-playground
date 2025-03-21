@@ -9,6 +9,7 @@
 - [High-level SDK for Kafka: Greyhound Unleashed](https://www.wix.engineering/post/building-a-high-level-sdk-for-kafka-greyhound-unleashed)
 - [video: How to Build 1000 Microservices with Kafka](https://www.youtube.com/watch?v=ZGqHTuA2uII)
 - [video: Kafka Based Global Data Mesh at Wix](https://www.youtube.com/watch?v=NHj1fSg7M-M)
+- [video: Greyhound Kafka library](https://www.youtube.com/watch?v=Up4HkV_9G-M)
 - [video: Migrating 2000 microservices to Multi Cluster Managed Kafka with 0 Downtime](https://www.youtube.com/watch?v=XKbG8a-9NRE)
 - [greyhound library](https://github.com/wix/greyhound)
  
