@@ -11,6 +11,7 @@
 - [video: Kafka Based Global Data Mesh at Wix](https://www.youtube.com/watch?v=NHj1fSg7M-M)
 - [video: Greyhound Kafka library](https://www.youtube.com/watch?v=Up4HkV_9G-M)
 - [video: Migrating 2000 microservices to Multi Cluster Managed Kafka with 0 Downtime](https://www.youtube.com/watch?v=XKbG8a-9NRE)
+- [video: Exactly Once Delivery is a Harsh Mistress](https://www.youtube.com/watch?v=XkXSjYvX4Mg)
 - [greyhound library](https://github.com/wix/greyhound)
  
 # Web UI for Kafka
