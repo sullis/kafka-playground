@@ -6,6 +6,8 @@ import org.testcontainers.containers.GenericContainer;
 import org.testcontainers.kafka.KafkaContainer;
 import org.testcontainers.utility.DockerImageName;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 
 /*
 
@@ -45,6 +47,7 @@ public class ContainerTest {
 
   private void validate(GenericContainer<?> container) {
     container.start();
+    assertThat(container.isRunning()).isTrue();
     container.stop();
     container.close();
   }
