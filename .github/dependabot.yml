@@ -6,6 +6,8 @@ updates:
       interval: "daily"
       time: "02:00"
     open-pull-requests-limit: 20
+    ignore:
+      - dependency-name: "org.apache.kafka:kafka-clients"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
