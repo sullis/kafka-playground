@@ -11,6 +11,7 @@ import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
+import org.awaitility.Awaitility;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedClass;
 import org.junit.jupiter.params.provider.Arguments;
@@ -18,7 +19,6 @@ import org.junit.jupiter.params.provider.MethodSource;
 import org.testcontainers.containers.GenericContainer;
 import org.testcontainers.kafka.ConfluentKafkaContainer;
 import org.testcontainers.kafka.KafkaContainer;
-import org.testcontainers.shaded.org.awaitility.Awaitility;
 import org.testcontainers.utility.DockerImageName;
 
 import static org.apache.kafka.clients.producer.ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG;
@@ -94,7 +94,7 @@ record ContainerTest(String name, GenericContainer container) {
         .atMost(Duration.ofSeconds(5))
         .untilAsserted(() -> {
           var pollResult = consumer.poll(Duration.ofMillis(50));
-          if (!pollResult.isEmpty()) {
+          if (pollResult.count() > 0) {
             pollResult.iterator()
                 .forEachRemaining(r -> allRecords.add((ConsumerRecord) r));
           }
