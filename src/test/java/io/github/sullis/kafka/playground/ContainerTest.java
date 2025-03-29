@@ -90,6 +90,7 @@ record ContainerTest(String name, GenericContainer container) {
     consumerConfig.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, deserializerClass);
     consumerConfig.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, deserializerClass);
     consumerConfig.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, 100);
+    consumerConfig.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
 
     var consumer = new KafkaConsumer(consumerConfig);
     consumer.subscribe(List.of("topic123"));
