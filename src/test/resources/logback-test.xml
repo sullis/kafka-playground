@@ -12,6 +12,7 @@
   <logger name="io.github.sullis" level="ALL"/>
   <logger name="org.apache" level="ERROR"/>
   <logger name="org.apache.hc.client5.http.wire" level="ALL"/>
+  <logger name="org.apache.kafka" level="ALL"/>
   <logger name="org.eclipse" level="ERROR"/>
   <logger name="com.ning" level="ERROR"/>
   <logger name="org.asynchttpclient" level="ERROR"/>
