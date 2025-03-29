@@ -64,9 +64,10 @@ record ContainerTest(String name, GenericContainer container) {
     final String bootstrapServers = "127.0.0.1:" + container.getFirstMappedPort();
     final Class serializerClass = org.apache.kafka.common.serialization.StringSerializer.class;
     final Class deserializerClass = org.apache.kafka.common.serialization.StringDeserializer.class;
+    final String clientId = UUID.randomUUID().toString();
 
     Properties producerConfig = new Properties();
-    producerConfig.put("client.id", UUID.randomUUID().toString());
+    producerConfig.put("client.id", clientId);
     producerConfig.put("bootstrap.servers", bootstrapServers);
     producerConfig.put("acks", "all");
 
@@ -80,10 +81,12 @@ record ContainerTest(String name, GenericContainer container) {
     }
 
     Properties consumerConfig = new Properties();
+    consumerConfig.put(ConsumerConfig.CLIENT_ID_CONFIG, clientId);
     consumerConfig.put(ConsumerConfig.GROUP_ID_CONFIG, "myGroupId");
     consumerConfig.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
     consumerConfig.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, deserializerClass);
     consumerConfig.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, deserializerClass);
+    consumerConfig.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, 100);
 
     var consumer = new KafkaConsumer(consumerConfig);
     consumer.subscribe(List.of("topic123"));
