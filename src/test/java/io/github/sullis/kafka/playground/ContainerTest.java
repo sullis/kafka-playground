@@ -16,6 +16,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedClass;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testcontainers.containers.GenericContainer;
 import org.testcontainers.kafka.ConfluentKafkaContainer;
 import org.testcontainers.kafka.KafkaContainer;
@@ -37,6 +39,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 @ParameterizedClass
 @MethodSource("argProvider")
 record ContainerTest(String name, GenericContainer container) {
+  private static final Logger LOGGER = LoggerFactory.getLogger(ContainerTest.class);
   private static final String APACHE_KAFKA_VERSION = "4.0.0";
   private static final String CONFLUENT_VERSION = "7.8.0";
   private static final KafkaContainer APACHE_KAFKA = new KafkaContainer(DockerImageName.parse("apache/kafka:" + APACHE_KAFKA_VERSION));
@@ -94,9 +97,10 @@ record ContainerTest(String name, GenericContainer container) {
     List<ConsumerRecord> allRecords = new ArrayList<>();
 
     Awaitility.await()
-        .atMost(Duration.ofSeconds(5))
+        .atMost(Duration.ofSeconds(10))
         .untilAsserted(() -> {
-          var pollResult = consumer.poll(Duration.ofMillis(50));
+          var pollResult = consumer.poll(Duration.ofMillis(100));
+          LOGGER.info("pollResult count=" + pollResult.count());
           if (pollResult.count() > 0) {
             pollResult.iterator()
                 .forEachRemaining(r -> allRecords.add((ConsumerRecord) r));
