@@ -36,7 +36,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
   https://java.testcontainers.org/modules/kafka/
 
  */
-@ParameterizedClass
+@ParameterizedClass(name = "{0}")
 @MethodSource("argProvider")
 record ContainerTest(String name, GenericContainer container) {
   private static final Logger LOGGER = LoggerFactory.getLogger(ContainerTest.class);
