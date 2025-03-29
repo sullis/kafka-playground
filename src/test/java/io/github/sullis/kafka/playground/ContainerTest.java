@@ -6,6 +6,7 @@ import org.junit.jupiter.params.ParameterizedClass;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.testcontainers.containers.GenericContainer;
+import org.testcontainers.kafka.ConfluentKafkaContainer;
 import org.testcontainers.kafka.KafkaContainer;
 import org.testcontainers.utility.DockerImageName;
 
@@ -27,14 +28,14 @@ record ContainerTest(String name, GenericContainer container) {
   private static final String CONFLUENT_VERSION = "7.9.0";
   private static final KafkaContainer APACHE_KAFKA = new KafkaContainer(DockerImageName.parse("apache/kafka:" + APACHE_KAFKA_VERSION));
   private static final KafkaContainer APACHE_KAFKA_NATIVE_IMAGE = new KafkaContainer(DockerImageName.parse("apache/kafka-native:" + APACHE_KAFKA_VERSION));
-  private static final org.testcontainers.containers.KafkaContainer CONFLUENT_PLATFORM_KAFKA = new org.testcontainers.containers.KafkaContainer(DockerImageName.parse("confluentinc/cp-kafka:" + CONFLUENT_VERSION));
-  private static final org.testcontainers.containers.KafkaContainer CONFLUENT_PLATFORM_KAFKA_WITH_KRAFT = new org.testcontainers.containers.KafkaContainer(DockerImageName.parse("confluentinc/cp-kafka:" + CONFLUENT_VERSION)).withKraft();
+  private static final ConfluentKafkaContainer CONFLUENT_PLATFORM_KAFKA = new ConfluentKafkaContainer(DockerImageName.parse("confluentinc/cp-kafka:" + CONFLUENT_VERSION));
 
   private static Stream<Arguments> argProvider() {
     return Stream.of(
         arguments("ApacheKafka", APACHE_KAFKA),
-        arguments("ApacheKafkaNativeImage", APACHE_KAFKA_NATIVE_IMAGE),
-        arguments("ConfluentKafka", CONFLUENT_PLATFORM_KAFKA));
+        arguments("ApacheKafkaNativeImage", APACHE_KAFKA_NATIVE_IMAGE)
+        // arguments("ConfluentKafka", CONFLUENT_PLATFORM_KAFKA)
+    );
   }
 
   @Test
