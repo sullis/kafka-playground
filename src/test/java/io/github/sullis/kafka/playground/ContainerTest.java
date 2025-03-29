@@ -41,6 +41,7 @@ record ContainerTest(String name, GenericContainer container) {
   public void validate() {
     container.start();
     assertThat(container.isRunning()).isTrue();
+    assertThat(container.getFirstMappedPort()).isGreaterThan(0);
     container.stop();
     container.close();
   }
