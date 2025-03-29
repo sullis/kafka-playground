@@ -1,6 +1,14 @@
 package io.github.sullis.kafka.playground;
 
+import java.util.Properties;
+import java.util.UUID;
 import java.util.stream.Stream;
+import org.apache.kafka.clients.KafkaClient;
+import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.apache.kafka.clients.consumer.ConsumerRecords;
+import org.apache.kafka.clients.consumer.KafkaConsumer;
+import org.apache.kafka.clients.producer.KafkaProducer;
+import org.apache.kafka.clients.producer.ProducerRecord;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedClass;
 import org.junit.jupiter.params.provider.Arguments;
@@ -10,6 +18,8 @@ import org.testcontainers.kafka.ConfluentKafkaContainer;
 import org.testcontainers.kafka.KafkaContainer;
 import org.testcontainers.utility.DockerImageName;
 
+import static org.apache.kafka.clients.producer.ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG;
+import static org.apache.kafka.clients.producer.ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
@@ -43,10 +53,28 @@ record ContainerTest(String name, GenericContainer container) {
   }
 
   @Test
-  public void validate() {
+  public void validate() throws Exception {
     container.start();
     assertThat(container.isRunning()).isTrue();
     assertThat(container.getFirstMappedPort()).isGreaterThan(0);
+
+    String bootstrapServer = "127.0.0.1:" + container.getFirstMappedPort();
+
+    Properties config = new Properties();
+    config.put("client.id", UUID.randomUUID().toString());
+    config.put("bootstrap.servers", bootstrapServer);
+    config.put("acks", "all");
+
+    var serializerClassName = org.apache.kafka.common.serialization.StringSerializer.class.getName();
+    config.put(KEY_SERIALIZER_CLASS_CONFIG, serializerClassName);
+    config.put(VALUE_SERIALIZER_CLASS_CONFIG, serializerClassName);
+
+    try (var producer = new KafkaProducer<String, String>(config)) {
+      var record = new ProducerRecord<>("topic123", null, "Hello", "World");
+      var metadata = producer.send(record).get();
+      assertThat(metadata.topic()).isEqualTo("topic123");
+    }
+
     container.stop();
     container.close();
   }
