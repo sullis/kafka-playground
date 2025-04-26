@@ -5,7 +5,7 @@
 - [async processing with Kafka Streams](https://www.responsive.dev/blog/async-processing-for-kafka-streams)
 
 # Videos
-- [Kafka meets Iceberg](https://www.youtube.com/watch?v=bzVjBu5nhyM) -- GOTO Chicago 2024
+- [Kafka meets Iceberg](https://www.youtube.com/watch?v=bzVjBu5nhyM) - Kasun Indrasiri  at GOTO Chicago 2024
 
 # Diskless Kafka
 - [Aiven diskless kafka](https://aiven.io/blog/guide-diskless-apache-kafka-kip-1150)
