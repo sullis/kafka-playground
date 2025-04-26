@@ -4,6 +4,9 @@
 - [DoorDash: Kafka Self Service Platform](https://doordash.engineering/2024/08/13/doordash-engineers-with-kafka-self-serve/)
 - [async processing with Kafka Streams](https://www.responsive.dev/blog/async-processing-for-kafka-streams)
 
+# Videos
+- [Kafka meets Iceberg](https://www.youtube.com/watch?v=bzVjBu5nhyM) -- GOTO Chicago 2024
+
 # Diskless Kafka
 - [Aiven diskless kafka](https://aiven.io/blog/guide-diskless-apache-kafka-kip-1150)
 
