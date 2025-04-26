@@ -7,6 +7,8 @@
 # Diskless Kafka
 - [Aiven diskless kafka](https://aiven.io/blog/guide-diskless-apache-kafka-kip-1150)
 
+# Rebuild kafka from scratch?
+- [Gunnar Morling blog post](https://www.morling.dev/blog/what-if-we-could-rebuild-kafka-from-scratch/)
   
 # Kafka at Wix
 - [kafka consumer proxy](https://www.wix.engineering/post/from-bottleneck-to-breakthrough-how-wix-cut-kafka-costs-by-30-with-a-push-based-consumer-proxy)
