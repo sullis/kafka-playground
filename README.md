@@ -8,7 +8,7 @@
 - [Kafka meets Iceberg](https://www.youtube.com/watch?v=bzVjBu5nhyM) - Kasun Indrasiri  at GOTO Chicago 2024
 
 # Diskless Kafka
-- [Aiven diskless kafka](https://aiven.io/blog/guide-diskless-apache-kafka-kip-1150)
+- [Aiven: Hitchhiker’s guide to Diskless Kafka](https://aiven.io/blog/guide-diskless-apache-kafka-kip-1150)
 
 # Rebuild kafka from scratch?
 - [Gunnar Morling blog post](https://www.morling.dev/blog/what-if-we-could-rebuild-kafka-from-scratch/)
