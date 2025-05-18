@@ -9,6 +9,7 @@
 
 # Diskless Kafka
 - [Aiven: Hitchhiker’s guide to Diskless Kafka](https://aiven.io/blog/guide-diskless-apache-kafka-kip-1150)
+- [Ins and Outs of KIP-1150: Diskless Topics in Apache Kafka](https://www.youtube.com/watch?v=hrMvOFoQ3X4)
 
 # Rebuild kafka from scratch?
 - [Gunnar Morling blog post](https://www.morling.dev/blog/what-if-we-could-rebuild-kafka-from-scratch/)
