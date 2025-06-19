@@ -13,6 +13,11 @@
 - [video: Ins and Outs of KIP-1150: Diskless Topics in Apache Kafka](https://www.youtube.com/watch?v=hrMvOFoQ3X4)
 - [GeekNarrator: Diskless Kafka KIP-1150](https://www.geeknarrator.com/blog/diskless-kafka-kip-1150)
 
+# WarpStream
+- [Reimplementing Apache Kafka with Golang and S3](https://www.youtube.com/watch?v=xgzmxe6cj6A) - Ryan Worl, WarpStream
+- [Beyond Kafka: Cutting Costs and Complexity with WarpStream and S3](https://www.youtube.com/watch?v=wgwUE2izH38) - Ryan Worl, WarpStream
+- [Beyond Tiered Storage: Deep dive into WarpStream's Storage Engine](https://www.youtube.com/watch?v=74ZuGhNP3w8) - Richie Artoul, WarpStream @ Current 2024
+
 # Rebuild kafka from scratch?
 - [Gunnar Morling blog post](https://www.morling.dev/blog/what-if-we-could-rebuild-kafka-from-scratch/)
   
