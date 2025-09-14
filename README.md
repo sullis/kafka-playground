@@ -13,6 +13,11 @@
 - [video: Ins and Outs of KIP-1150: Diskless Topics in Apache Kafka](https://www.youtube.com/watch?v=hrMvOFoQ3X4)
 - [GeekNarrator: Diskless Kafka KIP-1150](https://www.geeknarrator.com/blog/diskless-kafka-kip-1150)
 
+# Parallel Consumer
+- [Confluent parallel consumer](https://www.confluent.io/blog/introducing-confluent-parallel-message-processing-client/) - December 2020
+- [github: parallel-consumer](https://github.com/confluentinc/parallel-consumer)
+- [video: parallel-consumer](https://www.youtube.com/watch?v=mVYe_r0SBV8)
+
 # WarpStream
 - [Reimplementing Apache Kafka with Golang and S3](https://www.youtube.com/watch?v=xgzmxe6cj6A) - Ryan Worl, WarpStream
 - [Beyond Kafka: Cutting Costs and Complexity with WarpStream and S3](https://www.youtube.com/watch?v=wgwUE2izH38) - Ryan Worl, WarpStream
