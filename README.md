@@ -8,6 +8,7 @@
 - [Kafka meets Iceberg](https://www.youtube.com/watch?v=bzVjBu5nhyM) - Kasun Indrasiri  at GOTO Chicago 2024
 
 # Diskless Kafka
+- [Aiven: Diskless 2.0](https://aiven.io/blog/diskless-unified-zero-copy-apache-kafka) - September 2025
 - [Aiven: Hitchhiker’s guide to Diskless Kafka](https://aiven.io/blog/guide-diskless-apache-kafka-kip-1150)
 - [Aiven: Diskless Kafka is the tide](https://aiven.io/blog/diskless-kafka-is-the-tide-and-its-rising)
 - [video: Ins and Outs of KIP-1150: Diskless Topics in Apache Kafka](https://www.youtube.com/watch?v=hrMvOFoQ3X4)
