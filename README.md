@@ -26,7 +26,10 @@
 
 # Rebuild kafka from scratch?
 - [Gunnar Morling blog post](https://www.morling.dev/blog/what-if-we-could-rebuild-kafka-from-scratch/)
-  
+
+# StreamNative Kafka
+- [Ursa](https://streamnative.io/blog/ursa-reimagine-apache-kafka-for-the-cost-conscious-data-streaming)
+
 # Kafka at Wix
 - [kafka consumer proxy](https://www.wix.engineering/post/from-bottleneck-to-breakthrough-how-wix-cut-kafka-costs-by-30-with-a-push-based-consumer-proxy)
 - [High-level SDK for Kafka: Greyhound Unleashed](https://www.wix.engineering/post/building-a-high-level-sdk-for-kafka-greyhound-unleashed)
