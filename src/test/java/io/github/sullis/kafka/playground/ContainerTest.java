@@ -40,7 +40,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 @MethodSource("argProvider")
 record ContainerTest(String name, GenericContainer container) {
   private static final Logger LOGGER = LoggerFactory.getLogger(ContainerTest.class);
-  private static final String APACHE_KAFKA_VERSION = "4.0.0";
+  private static final String APACHE_KAFKA_VERSION = "4.1.0";
   private static final String CONFLUENT_VERSION = "7.8.0";
   private static final KafkaContainer APACHE_KAFKA = new KafkaContainer(DockerImageName.parse("apache/kafka:" + APACHE_KAFKA_VERSION));
   private static final KafkaContainer APACHE_KAFKA_NATIVE_IMAGE = new KafkaContainer(DockerImageName.parse("apache/kafka-native:" + APACHE_KAFKA_VERSION));
