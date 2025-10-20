@@ -52,4 +52,5 @@
 # spring-kafka
 - [Spring Kafka Headers](https://docs.spring.io/spring-kafka/reference/kafka/headers.html)
   
-
+# Moving data
+- [9 ways to move data kafka to iceberg](https://blog.streambased.io/p/the-9-ways-to-move-data-kafka-iceberg)
