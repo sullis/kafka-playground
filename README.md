@@ -25,6 +25,9 @@
 - [Beyond Kafka: Cutting Costs and Complexity with WarpStream and S3](https://www.youtube.com/watch?v=wgwUE2izH38) - Ryan Worl, WarpStream
 - [Beyond Tiered Storage: Deep dive into WarpStream's Storage Engine](https://www.youtube.com/watch?v=74ZuGhNP3w8) - Richie Artoul, WarpStream @ Current 2024
 
+# Low latency kafka
+- [tier 1 bank tuning](https://www.confluent.io/blog/tier-1-bank-ultra-low-latency-trading-design/)
+
 # Rebuild kafka from scratch?
 - [Gunnar Morling blog post](https://www.morling.dev/blog/what-if-we-could-rebuild-kafka-from-scratch/)
 
