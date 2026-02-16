@@ -1,5 +1,31 @@
 # kafka-playground
 
+## Test Utilities
+
+### KafkaContainerFactory
+
+A factory class for creating Kafka container instances for testing. Provides convenient methods to create different types of Kafka containers with sensible defaults.
+
+**Usage examples:**
+
+```java
+// Create Apache Kafka container with default version
+KafkaContainer kafka = KafkaContainerFactory.createApacheKafka();
+
+// Create Confluent Platform container with custom version
+ConfluentKafkaContainer kafka = KafkaContainerFactory.createConfluentPlatform("7.7.0");
+
+// Use builder pattern for flexibility
+GenericContainer<?> kafka = KafkaContainerFactory.builder()
+    .type(ContainerType.APACHE_KAFKA_NATIVE)
+    .version("4.1.0")
+    .build();
+```
+
+See [KafkaContainerFactoryTest.java](src/test/java/io/github/sullis/kafka/playground/testutil/KafkaContainerFactoryTest.java) for more examples.
+
+---
+
 - [Kafka time lag metrics](https://www.warpstream.com/blog/the-kafka-metric-youre-not-using-stop-counting-messages-start-measuring-time)
 - [DoorDash: Kafka Self Service Platform](https://doordash.engineering/2024/08/13/doordash-engineers-with-kafka-self-serve/)
 - [async processing with Kafka Streams](https://www.responsive.dev/blog/async-processing-for-kafka-streams)
