@@ -35,8 +35,13 @@
 - [Ursa](https://streamnative.io/blog/ursa-reimagine-apache-kafka-for-the-cost-conscious-data-streaming)
 
 # Kafka at Wix
+- [The Wix Engineering 2025 Review: AI, Platforms, Data, and Deep Technical Lessons Learned](https://www.wix.engineering/post/the-wix-engineering-2025-review-ai-platforms-data-and-deep-technical-lessons-learned)
+- [Rebuilding the Online Feature Store with Kafka and Flink](https://www.kai-waehner.de/blog/2025/09/15/online-feature-store-for-ai-and-machine-learning-with-apache-kafka-and-flink/)
 - [kafka consumer proxy](https://www.wix.engineering/post/from-bottleneck-to-breakthrough-how-wix-cut-kafka-costs-by-30-with-a-push-based-consumer-proxy)
 - [High-level SDK for Kafka: Greyhound Unleashed](https://www.wix.engineering/post/building-a-high-level-sdk-for-kafka-greyhound-unleashed)
+- [video: Before and After: Transforming Wix's Online Feature Store with Apache Flink](https://current.confluent.io/post-conference-videos-2025/before-and-after-transforming-wixs-online-feature-store-with-apache-flink-lnd25)
+- [video: Async Excellence: Unlocking Scalability with Kafka - Devoxx Greece 2025](https://www.natansil.com/)
+- [video: Redefining Event-Driven Architecture at Wix: Integration Ignited - DDD Europe 2025](https://2025.dddeurope.com/program/redefining-event-driven-architecture-at-wix-integration-ignited/)
 - [video: How to Build 1000 Microservices with Kafka](https://www.youtube.com/watch?v=ZGqHTuA2uII)
 - [video: Kafka Based Global Data Mesh at Wix](https://www.youtube.com/watch?v=NHj1fSg7M-M)
 - [video: Greyhound Kafka library](https://www.youtube.com/watch?v=Up4HkV_9G-M)
