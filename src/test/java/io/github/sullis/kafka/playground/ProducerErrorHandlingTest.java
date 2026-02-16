@@ -10,11 +10,11 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.KafkaException;
 import org.apache.kafka.common.errors.SerializationException;
 import org.apache.kafka.common.errors.TimeoutException;
+import io.github.sullis.kafka.playground.testutil.KafkaContainerFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.testcontainers.kafka.KafkaContainer;
-import org.testcontainers.utility.DockerImageName;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
@@ -23,12 +23,11 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
  * Tests for Kafka producer error handling scenarios.
  */
 public class ProducerErrorHandlingTest {
-  private static final String KAFKA_VERSION = "4.1.0";
   private KafkaContainer kafka;
 
   @BeforeEach
   public void setUp() {
-    kafka = new KafkaContainer(DockerImageName.parse("apache/kafka:" + KAFKA_VERSION));
+    kafka = KafkaContainerFactory.createApacheKafka();
     kafka.start();
   }
 

@@ -1,6 +1,7 @@
 package io.github.sullis.kafka.playground;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.github.sullis.kafka.playground.testutil.KafkaContainerFactory;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.util.ArrayList;
@@ -24,7 +25,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.testcontainers.kafka.KafkaContainer;
-import org.testcontainers.utility.DockerImageName;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -32,13 +32,12 @@ import static org.assertj.core.api.Assertions.assertThat;
  * Tests for different serialization formats.
  */
 public class SerializationTest {
-  private static final String KAFKA_VERSION = "4.1.0";
   private KafkaContainer kafka;
   private ObjectMapper objectMapper;
 
   @BeforeEach
   public void setUp() {
-    kafka = new KafkaContainer(DockerImageName.parse("apache/kafka:" + KAFKA_VERSION));
+    kafka = KafkaContainerFactory.createApacheKafka();
     kafka.start();
     objectMapper = new ObjectMapper();
   }

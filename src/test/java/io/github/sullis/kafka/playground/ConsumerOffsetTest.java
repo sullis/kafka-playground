@@ -1,5 +1,6 @@
 package io.github.sullis.kafka.playground;
 
+import io.github.sullis.kafka.playground.testutil.KafkaContainerFactory;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -21,7 +22,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.testcontainers.kafka.KafkaContainer;
-import org.testcontainers.utility.DockerImageName;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -29,12 +29,11 @@ import static org.assertj.core.api.Assertions.assertThat;
  * Tests for Kafka consumer offset management and partition operations.
  */
 public class ConsumerOffsetTest {
-  private static final String KAFKA_VERSION = "4.1.0";
   private KafkaContainer kafka;
 
   @BeforeEach
   public void setUp() {
-    kafka = new KafkaContainer(DockerImageName.parse("apache/kafka:" + KAFKA_VERSION));
+    kafka = KafkaContainerFactory.createApacheKafka();
     kafka.start();
   }
 
