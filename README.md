@@ -41,6 +41,9 @@ See [KafkaContainerFactoryTest.java](src/test/java/io/github/sullis/kafka/playgr
 - [video: Ins and Outs of KIP-1150: Diskless Topics in Apache Kafka](https://www.youtube.com/watch?v=hrMvOFoQ3X4)
 - [GeekNarrator: Diskless Kafka KIP-1150](https://www.geeknarrator.com/blog/diskless-kafka-kip-1150)
 
+# Ursa for Kafka
+- [ursa for kafka deep dive](https://streamnative.io/blog/ursa-for-kafka-deep-dive-the-kafka-problem-and-ursas-storage-leaderless-architecture)
+
 # Parallel Consumer
 - [Confluent parallel consumer](https://www.confluent.io/blog/introducing-confluent-parallel-message-processing-client/) - December 2020
 - [github: parallel-consumer](https://github.com/confluentinc/parallel-consumer)
