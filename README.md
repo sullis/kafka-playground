@@ -92,3 +92,10 @@ See [KafkaContainerFactoryTest.java](src/test/java/io/github/sullis/kafka/playgr
   
 # Moving data
 - [9 ways to move data kafka to iceberg](https://blog.streambased.io/p/the-9-ways-to-move-data-kafka-iceberg)
+
+# Kafka alternatives
+- [Apache Pulsar](https://pulsar.apache.org)
+- [ursa](https://github.com/openlakestream/ursa)
+- [blob-stream](https://blog.bitdrift.io/post/blob-stream-kafka-alternative)
+
+
